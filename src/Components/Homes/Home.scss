@@ -1,0 +1,21 @@
+.banner{
+    height: 400px;
+    background-color:  rgba(30, 30,30);;
+}
+.row{
+> div {
+    display: flex;
+    padding: 1rem;
+    overflow-x: auto;
+}
+}
+
+.card{
+    width:200px;
+   margin: 0.3rem;
+    cursor: pointer;
+    transition: transform 0.5s;
+    &:hover{
+        transform: translateY(-10px) scale(1.1);
+    }
+}
