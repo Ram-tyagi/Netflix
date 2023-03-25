@@ -8,20 +8,38 @@ const Card=({img})=>(
 
  
 )
-const Row=({title})=>( 
+const Row=({title,arr=[{
+  img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKRnAj48EFxcKnUfL1C6pOnk29ugKYAgo0-A&usqp=CAU"
+},
+{
+  img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKRnAj48EFxcKnUfL1C6pOnk29ugKYAgo0-A&usqp=CAU"
+},
+{
+  img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKRnAj48EFxcKnUfL1C6pOnk29ugKYAgo0-A&usqp=CAU"
+}
+,{
+  img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKRnAj48EFxcKnUfL1C6pOnk29ugKYAgo0-A&usqp=CAU"
+},
+{
+  img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKRnAj48EFxcKnUfL1C6pOnk29ugKYAgo0-A&usqp=CAU"
+},{
+  img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKRnAj48EFxcKnUfL1C6pOnk29ugKYAgo0-A&usqp=CAU"
+}
+
+]})=>( 
   <div className='row'>
     <h2>
       {title}
     </h2>
   <div>
-  <Card img={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKRnAj48EFxcKnUfL1C6pOnk29ugKYAgo0-A&usqp=CAU"} />
-    <Card img={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKRnAj48EFxcKnUfL1C6pOnk29ugKYAgo0-A&usqp=CAU"} />
-    <Card img={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKRnAj48EFxcKnUfL1C6pOnk29ugKYAgo0-A&usqp=CAU"} />
-    <Card img={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKRnAj48EFxcKnUfL1C6pOnk29ugKYAgo0-A&usqp=CAU"} />
-    <Card img={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKRnAj48EFxcKnUfL1C6pOnk29ugKYAgo0-A&usqp=CAU"} />
-    <Card img={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKRnAj48EFxcKnUfL1C6pOnk29ugKYAgo0-A&usqp=CAU"} />
-    <Card img={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKRnAj48EFxcKnUfL1C6pOnk29ugKYAgo0-A&usqp=CAU"} />
-    <Card img={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKRnAj48EFxcKnUfL1C6pOnk29ugKYAgo0-A&usqp=CAU"} />
+    {
+      arr.map((item)=>( 
+        <Card img={item.img} />
+      ))
+    }
+  
+    
+    
   </div>
   </div>
 )
@@ -30,6 +48,9 @@ const Home = () => {
    <section className='home'>
   <div className='banner'></div>
   <Row title={"Popular on netflix"}/>
+  <Row title={"Recommended for you"}/>
+  <Row title={"Continue watching"}/>
+  <Row title={"My List"}/>
    </section>
   )
 }

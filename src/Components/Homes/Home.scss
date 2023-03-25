@@ -3,9 +3,16 @@
     background-color:  rgba(30, 30,30);;
 }
 .row{
+    background-color: rgba(30, 30,30);
+    padding: 1rem;
+
+   >h2{
+    font-weight: 400;
+    margin: 0.3rem;
+   }
 > div {
     display: flex;
-    padding: 1rem;
+    justify-content: center;
     overflow-x: auto;
 }
 }
